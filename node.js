@@ -34,13 +34,14 @@ const {
 module.exports = {
   getCoreDefinition,
   getPlatformDefinition,
-  v0: Object.assign({
+  v0: {
     CorePromiseClient,
     PlatformPromiseClient,
-    pbjs: Object.assign(
-      {},
-      pbjsCoreMessages,
-      pbjsPlatformMessages,
-    ),
-  }, protocCoreMessages, protocPlatformMessages),
+    pbjs: {
+      ...pbjsCoreMessages,
+      ...pbjsPlatformMessages,
+    },
+    ...protocCoreMessages,
+    ...protocPlatformMessages,
+  },
 };
