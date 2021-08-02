@@ -1,4 +1,4 @@
-const grpc = require('grpc');
+const grpc = require('@grpc/grpc-js');
 const { promisify } = require('util');
 
 const {
@@ -15,7 +15,7 @@ const {
       protobufToJsonFactory,
     },
   },
-} = require('@dashevo/grpc-common');
+} = require('strophy-grpc-common');
 
 const {
   org: {
